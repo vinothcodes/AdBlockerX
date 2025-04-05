@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "Universal Ad Blocker",
+    "description": "A Chrome extension that blocks ads on various video and audio streaming platforms.",
+    "version": "1.0",
+    "permissions": [
+      "activeTab"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://www.youtube.com/*",
+          "https://www.vimeo.com/*",
+          "https://www.dailymotion.com/*",
+          "https://www.twitch.tv/*",
+          "https://www.soundcloud.com/*",
+          "https://www.spotify.com/*",
+          "https://www.mixcloud.com/*",
+          "https://www.vice.com/*"
+        ],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "48": "icons/adblock-48.png",
+      "128": "icons/adblock-128.png"
+    }
+  }
+  

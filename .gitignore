@@ -1,0 +1,9 @@
+# Ignore build directories
+/build/
+
+# Ignore node_modules (if you have npm or package.json)
+/node_modules/
+
+# Ignore Chrome extension cache and other temp files
+*.log
+.DS_Store
